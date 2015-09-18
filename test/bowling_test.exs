@@ -37,6 +37,12 @@ defmodule BowlingTest do
     assert score == 20
   end
 
+  test "a strike on the 9th frame is properly scored" do
+    score = Bowling.score([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 5, 3])
+
+    assert score == 26
+  end
+
   test "a perfect game" do
     score = Bowling.score([10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10])
 
